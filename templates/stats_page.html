@@ -3,7 +3,23 @@
 {% block content %}
 <center>
     <h1>{% block title %}Stats{% endblock %}</h1>
-    <div  id="datepicker" data-date={{date.month}}"/"{{date.day}}"/"{{date.year}}> </div>
+    <div  id="datepicker" data-date={{date.month}}"/"{{date.day}}"/"{{date.year}}>
+    </div>
+    <h2>Lebron's Stats on {{date.month}}/{{date.day}}/{{date.year}}</h2>
+    {% if stats != None %}
+    <table class="table">
+      <tbody style="color: white;">
+        {% for category, stat in stats.items() %}
+        <tr>
+          <td>{{ category }}</td>
+          <td>{{ stat }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <h3>No game</h3>
+    {% endif %}
 </center>
     <!-- <div class="container"> -->
     <!--   <div class="row"> -->
@@ -19,7 +35,6 @@
     <!--     </div> -->
     <!--   </div> -->
     <!-- </div> -->
-    {{ stats }}
 {% endblock %}
 
 {% block scripts %}
