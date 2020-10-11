@@ -72,7 +72,7 @@ class PlayerStats:
         -------
         dict of stats or None if there was no game for the player on that date.
         """
-        if date.month > 7:
+        if date.month > 7 and date.year != 2020:
             year_str = str(date.year) + '-' + str(date.year + 1)[-2:]
             year = date.year + 1
         else:
@@ -82,7 +82,7 @@ class PlayerStats:
 
         try:
             boxscore = team_schedule(date).boxscore
-        except ValueError:
+        except:
             return None
 
         for player in boxscore.away_players + boxscore.home_players:
