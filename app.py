@@ -39,8 +39,3 @@ def stats_page(date):
     # takes user to stats page, here we will brainstorm a lot and see what happens
     return render_template('stats_page.html', date={'year': year, 'month': month, 'day': day}, stats=stats)
 
-
-@app.route('/trivia')
-def trivia_page():
-    # takes user to about page
-    return render_template('trivia_page.html')
