@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+from stats.stats import PlayerStats
+import datetime
 
 app = Flask(__name__)
 
@@ -32,10 +34,18 @@ def lakers_page():
     return 'Lakers'
 
 
-@app.route('/stats')
-def stats_page():
+@app.route('/stats/<date>')
+def stats_page(date):
+    split_date = [int(x) for x in date.split('-')]
+    year = split_date[0]
+    month = split_date[1]
+    day = split_date[2]
+
+    lbj = PlayerStats('jamesle01')
+
+    stats = lbj.game_stats(datetime.date(year, month, day))
     # takes user to stats page, here we will brainstorm a lot and see what happens
-    return 'Stats'
+    return render_template('stats_page.html', date={'year': year, 'month': month, 'day': day}, stats=stats)
 
 
 @app.route('/trivia')

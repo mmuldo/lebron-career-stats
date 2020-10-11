@@ -82,7 +82,7 @@ class PlayerStats:
 
         try:
             boxscore = team_schedule(date).boxscore
-        except:
+        except ValueError:
             return None
 
         for player in boxscore.away_players + boxscore.home_players:
