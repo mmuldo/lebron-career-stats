@@ -1,9 +1,8 @@
 from flask import Flask, render_template
-from stats.stats import PlayerStats
+from utils.stats import PlayerStats
 import datetime
 
 app = Flask(__name__)
-
 
 @app.route('/')
 def home_page():
