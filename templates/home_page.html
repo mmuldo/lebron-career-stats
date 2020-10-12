@@ -2,11 +2,11 @@
 {% block title %}Home Page {% endblock %}
 {% block content %}
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-   <!-- <ol class="carousel-indicators">
+    <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>-->
+    </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="{{url_for('static', filename='images/bron2010.jpg')}}" class="d-block w 100"
@@ -32,10 +32,6 @@
                 <span class="sr-only">Next</span>
             </a>
     </div>
-    <p>Let's Talk LeBron. This is the place to find everything about LeBron "The GOAT" James. Find out about general
-        information,
-        his current team and all of his stats since the beginning of his career. At Let's Talk Lebron, the game is
-        always on.</p>
     <div class="container">
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -48,4 +44,8 @@
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"></script>
 </div>
+<p style="font-size: large; padding-top: 25px;"> Let's Talk LeBron. This is the place to find everything about LeBron "The GOAT" James. Find out about general
+        information,
+        his current team and all of his stats since the beginning of his career. At Let's Talk LeBron, the game is
+        always on.</p>
 {% endblock %}
