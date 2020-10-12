@@ -5,7 +5,7 @@
     <h1>{% block title %}Stats{% endblock %}</h1>
     <div  id="datepicker" data-date={{date.month}}"/"{{date.day}}"/"{{date.year}}>
     </div>
-    <h2>Lebron's Stats on {{date.month}}/{{date.day}}/{{date.year}}</h2>
+    <h2>LeBron's Stats on {{date.month}}/{{date.day}}/{{date.year}}</h2>
     {% if stats != None %}
     <table class="table">
       <tbody style="color: white;">
@@ -21,20 +21,6 @@
     <h3>No game</h3>
     {% endif %}
 </center>
-    <!-- <div class="container"> -->
-    <!--   <div class="row"> -->
-    <!--     <div class='col-sm-6'> -->
-    <!--       <div class="form-group"> -->
-    <!--         <div class='input-group date' id='calendar'> -->
-    <!--           <input type='text' class="form-control" /> -->
-    <!--           <span class="input-group-addon"> -->
-    <!--             <span class="glyphicon glyphicon-calendar"></span> -->
-    <!--           </span> -->
-    <!--         </div> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!--   </div> -->
-    <!-- </div> -->
 {% endblock %}
 
 {% block scripts %}
